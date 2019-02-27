@@ -1,12 +1,4 @@
 
-# coding: utf-8
-
-# In[ ]:
-
-
-# Homework Solution
-
-# Importing the libraries
 import cv2
 
 # Loading the cascades
@@ -29,7 +21,7 @@ def detect(gray, frame):
             cv2.rectangle(roi_color, (sx, sy), (sx+sw, sy+sh), (0, 0, 255), 2)
     return frame
 
-# Doing some Face Recognition with the webcam
+# Face Recognition with the webcam
 video_capture = cv2.VideoCapture(0)
 while True:
     _, frame = video_capture.read()
@@ -40,4 +32,3 @@ while True:
         break
 video_capture.release()
 cv2.destroyAllWindows()
-
